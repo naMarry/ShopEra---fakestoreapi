@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Promote from '../components/home/Promote';
 import Contact from '../components/home/Contact';
 import MoreFeatures from '../components/home/MoreFeatures';
+import Electronics from '../components/home/Electronics';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Products/>
       <Promote/>
       <Contact/>
+      <Electronics/>
       <MoreFeatures/>
       <Footer/>
     </>

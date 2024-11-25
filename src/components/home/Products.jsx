@@ -38,7 +38,7 @@ export default function Products() {
                                         {
                                             products.map((pro, index) =>
                                                 <div className="col mb-5" key={index}>
-                                                    <div className="product-item position-relative">
+                                                    <div className="product-item card w-100 mb-3 p-3 rounded-4 shadow border-0 position-relative">
                                                         <span className="badge bg-success position-absolute m-3">-30%</span>
                                                         <Link to="#" className="btn-wishlist position-absolute py-1 px-2 rounded-circle" style={{ top: "10px", right: "10px", backgroundColor: "#f3f3f3", cursor: 'pointer' }}>
                                                             <i class="bi bi-heart text-black"></i>
@@ -92,7 +92,7 @@ export default function Products() {
                                         {
                                             filterMenClothes.map((pro, index) =>
                                                 <div className="col mb-5" key={index}>
-                                                    <div className="product-item position-relative">
+                                                    <div className="product-item card w-100 mb-3 p-3 rounded-4 shadow border-0 position-relative">
                                                         <span className="badge bg-success position-absolute m-3">-30%</span>
                                                         <Link to="#" className="btn-wishlist position-absolute py-1 px-2 rounded-circle" style={{ top: "10px", right: "10px", backgroundColor: "#f3f3f3", cursor: 'pointer' }}>
                                                             <i class="bi bi-heart text-black"></i>
@@ -146,7 +146,7 @@ export default function Products() {
                                         {
                                             filterWomenClothes.map((pro, index) =>
                                                 <div className="col mb-5" key={index}>
-                                                    <div className="product-item position-relative">
+                                                    <div className="product-item card w-100 mb-3 p-3 rounded-4 shadow border-0 position-relative">
                                                         <span className="badge bg-success position-absolute m-3">-30%</span>
                                                         <Link to="#" className="btn-wishlist position-absolute py-1 px-2 rounded-circle" style={{ top: "10px", right: "10px", backgroundColor: "#f3f3f3", cursor: 'pointer' }}>
                                                             <i class="bi bi-heart text-black"></i>
