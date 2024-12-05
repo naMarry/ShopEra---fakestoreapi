@@ -9,7 +9,7 @@ export default function RelatedProducts() {
         singleProduct
     } = useContext(ProductContext);
 
-    const filterRelatedPro = products.filter(pro => pro.category === singleProduct.category).slice(0, 4);
+    const filterRelatedPro = products.filter(pro => pro.category === singleProduct?.category).slice(0, 4);
 
     return (
         <section className='mt-5'>
