@@ -1,69 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import assets from '../../assets/images/assets'
 
 export default function Herobanner() {
     return (
-        <section
-            className="py-3"
-            style={{
-                backgroundImage: `url('images/background-pattern.jpg')`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-            }}
-        >
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner-blocks">
-                            <div class="banner-ad large bg-info block-1">
-                                <div class="swiper main-swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="row banner-content p-5" style={{backgroundColor: "#fde2b8"}}>
-                                                <div class="content-wrapper col-md-7">
-                                                    <div class="categories my-3">100% quality</div>
-                                                    <h3 class="display-4">Best Products</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <Link href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Shop Now</Link>
-                                                </div>
-                                                <div class="img-wrapper col-md-5">
-                                                    <img src="images/product-thumb-1.png" alt='' class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="row banner-content p-5">
-                                                <div class="content-wrapper col-md-7">
-                                                    <div class="categories mb-3 pb-3">100% natural</div>
-                                                    <h3 class="banner-title">Fresh Smoothie & Summer Juice</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <Link href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</Link>
-                                                </div>
-                                                <div class="img-wrapper col-md-5">
-                                                    <img src="images/product-thumb-1.png" alt='' class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="row banner-content p-5">
-                                                <div class="content-wrapper col-md-7">
-                                                    <div class="categories mb-3 pb-3">100% natural</div>
-                                                    <h3 class="banner-title">Heinz Tomato Ketchup</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <Link href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</Link>
-                                                </div>
-                                                <div class="img-wrapper col-md-5">
-                                                    <img src="images/product-thumb-2.png" class="img-fluid" alt='' />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
+        <section className="py-3" style={{backgroundColor: '#f3f3f3'}}>
+            <div class="container">
+                <div class="row py-4 align-items-center">
+                    <div className="col-12 col-sm-6">
+                        <h1>Best Quality Products</h1>
+                        <p>Lorem ipsum dolor sit amet consect abore magnam, nobis corrupti qui ea facere dolor!</p>
+                        <Link to='/shops' className='py-2 px-3 text-decoration-none mt-2 rounded-3 bg-dark text-white'>Buy Now</Link>
+                    </div>
+                    <div className="col-12 col-sm-6 d-flex justify-content-center">
+                        <img src={assets.homeHero} alt="" className='object-fit-cover rounded-circle' style={{width: '250px', height: '250px'}}/>
                     </div>
                 </div>
             </div>

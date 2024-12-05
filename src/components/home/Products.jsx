@@ -14,11 +14,12 @@ export default function Products() {
         return <div>Error: {error.message}</div>;
     }
 
+    const filterJewelery = products.filter(pro => pro.category === "jewelery");
     const filterMenClothes = products.filter(pro => pro.category === "men's clothing");
     const filterWomenClothes = products.filter(pro => pro.category === "women's clothing");
 
     return (
-        <section class="py-5">
+        <section class="pb-5">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -27,9 +28,9 @@ export default function Products() {
                                 <h3>Trending Products</h3>
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <Link href="#" class="nav-link text-uppercase fs-6 active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all">All</Link>
+                                        <Link href="#" class="nav-link text-uppercase fs-6 active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all">Women Clothing</Link>
                                         <Link href="#" class="nav-link text-uppercase fs-6" id="nav-fruits-tab" data-bs-toggle="tab" data-bs-target="#nav-fruits">Men Clothing</Link>
-                                        <Link href="#" class="nav-link text-uppercase fs-6" id="nav-juices-tab" data-bs-toggle="tab" data-bs-target="#nav-juices">Women Clothing</Link>
+                                        <Link href="#" class="nav-link text-uppercase fs-6" id="nav-juices-tab" data-bs-toggle="tab" data-bs-target="#nav-juices">Jewelery</Link>
                                     </div>
                                 </nav>
                             </div>
@@ -37,7 +38,7 @@ export default function Products() {
                                 <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
                                     <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                         {
-                                            products.map((pro, index) =>
+                                            filterWomenClothes.map((pro, index) =>
                                                 <Card product={pro} index={index} />
                                             )}
                                     </div>
@@ -55,7 +56,7 @@ export default function Products() {
                                 <div className="tab-pane fade" id="nav-juices" role="tabpanel" aria-labelledby="nav-juices-tab">
                                     <div className="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                         {
-                                            filterWomenClothes.map((pro, index) =>
+                                            filterJewelery.map((pro, index) =>
                                                 <Card product={pro} index={index} />
                                             )}
                                     </div>

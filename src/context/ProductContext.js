@@ -11,6 +11,24 @@ export const ProductProvider = ({ children }) => {
     const [singleProduct, setSingleProduct] = useState(null);
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [shippingInfo, setShippingInfo] = useState({
+        fullName: '',
+        address: '',
+        city: '',
+        state: '',
+        postcode: '',
+        country: '',
+        email: '',
+        phone: ''
+    });
+
+    //handling user shipping info
+    const updateShippingInfo = (newInfo) => {
+        setShippingInfo((prevInfo) => ({
+            ...prevInfo,
+            ...newInfo
+        }));
+    };
 
     // fetch data from api products 
     useEffect(() => {
@@ -38,28 +56,27 @@ export const ProductProvider = ({ children }) => {
     const getProductById = async (id) => {
         try {
             const product = await fetchProductsByID(id);
+            if (!product) {
+                throw new Error('Product not found');
+            }
             setSingleProduct(product);
-
         } catch (error) {
-            throw error;
+            console.error('Error fetching product:', error);
         }
     };
 
     // //add to cart btn management
     const [selectedItems, setSelectedItems] = useState({});
 
-    //remove item from cart
     const handleRemoveCart = (pro_id) => {
         setSelectedItems((prev) => {
             const newSelectedItems = { ...prev };
-            delete newSelectedItems[pro_id]; 
+            delete newSelectedItems[pro_id];
             return newSelectedItems;
         });
     };
 
-    //subtract cart
     const handleDecreaseCart = (pro_id) => {
-       
         setSelectedItems(prev => {
             const newQuntity = Math.max((prev[pro_id] || 1) - 1, 0);
 
@@ -67,11 +84,12 @@ export const ProductProvider = ({ children }) => {
         });
     }
 
-    //add to cart
     const handleIncreaseCart = (pro_id) => {
         setSelectedItems(prev => ({ ...prev, [pro_id]: (prev[pro_id] || 0) + 1 }))
     }
 
+
+    //overall product price& items count
     useEffect(() => {
         const itemsCount = Object.values(selectedItems).reduce((acc, qty) => acc + qty, 0);
         const priceCount = Object.entries(selectedItems).reduce((acc, [id, qty]) => {
@@ -81,30 +99,11 @@ export const ProductProvider = ({ children }) => {
         }, 0);
 
         setTotalItems(itemsCount);
-        setTotalPrice(priceCount);
+        setTotalPrice(priceCount.toFixed(2));
     }, [selectedItems, products]);
-
-    //shipping fee
-    const [shipping, setShipping] = useState(1);
-    const handleShippingFee = (e) => {
-        setShipping(Number(e.target.value));
-    }
 
     //show only the products that was selected
     const selectedProducts = products.filter((product) => selectedItems[product.id] > 0);
-
-    //filter products
-    const [filteredProducts, setFilteredProducts] = useState(products);
-    const filterProducts = (category) => {
-        let filtered = [...products];
-
-        if (category && category !== 'all') {
-            filtered = filtered.filter(product => product.category === category);
-        }
-
-        setFilteredProducts(filtered);
-    };
-
 
     return (
         <ProductContext.Provider value={{
@@ -120,6 +119,12 @@ export const ProductProvider = ({ children }) => {
             handleRemoveCart,
             totalItems,
             totalPrice,
+            setTotalItems,
+            setTotalPrice,
+            getProductById,
+            singleProduct,
+            shippingInfo,
+            updateShippingInfo
         }}>
             {children}
         </ProductContext.Provider>

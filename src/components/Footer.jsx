@@ -10,7 +10,7 @@ export default function Footer() {
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="footer-menu">
-                                <img src={assets.logo} alt="logo" style={{ width: "100px" }} />
+                                <img src={assets.logo} alt="logo" style={{ width: "200px" }} />
                                 <div class="social-links mt-5">
                                     <ul class="d-flex list-unstyled gap-2">
                                         <li>

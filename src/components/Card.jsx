@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import '../App.css';
+import { Link, useNavigate } from 'react-router-dom';
 import { ProductContext } from '../context/ProductContext'
 
 export default function Card({ product, index }) {
@@ -9,19 +10,27 @@ export default function Card({ product, index }) {
         handleIncreaseCart
     } = useContext(ProductContext);
 
+    //lead to product detail page
+    const navigate = useNavigate();
+    
+    const handleViewProductDetail = () => {
+        if (product && product.id) {
+            navigate(`/product/${product.id}`);
+        } else {
+            console.error('Product not found or ID is missing');
+        }
+    }
+
     return (
         <div className="col" key={index}>
-            <div className="product-item card w-100 mb-3 p-3 rounded-4 shadow border-0 position-relative">
+            <div className="product-item card w-100 mb-5 p-3 rounded-4 shadow border-0 position-relative">
                 <span className="badge bg-success position-absolute m-3">-30%</span>
-                <Link to="#" className="btn-wishlist position-absolute py-1 px-2 rounded-circle" style={{ top: "10px", right: "10px", backgroundColor: "#f3f3f3", cursor: 'pointer' }}>
-                    <i class="bi bi-heart text-black"></i>
-                </Link>
                 <figure>
                     <Link to="/index.html" title="Product Title">
                         <img src={product.image} className="tab-image w-100 object-fit-cover" alt="Product" style={{ height: "280px" }} />
                     </Link>
                 </figure>
-                <h5>{product.title}</h5>
+                <h5 className='two-line-text'>{product.title}</h5>
                 <span className="qty">1 Unit</span>
                 <span className="rating">
                     <i class="bi bi-star-fill text-warning mx-2 mb-1"></i>
@@ -39,7 +48,7 @@ export default function Card({ product, index }) {
                                 -
                             </button>
                         </span>
-                        <span className='mx-2'>{selectedItems[product.id]}</span>
+                        <span className='mx-2'>{selectedItems[product.id] || 0}</span>
                         <span className="input-group-btn">
                             <button onClick={() => handleIncreaseCart(product.id)}
                                 type="button"
@@ -50,9 +59,9 @@ export default function Card({ product, index }) {
                             </button>
                         </span>
                     </div>
-                    <Link to="#" className="nav-link">
-                        Add to Cart <iconify-icon icon="uil:shopping-cart"></iconify-icon>
-                    </Link>
+                    <button to="#" className="nav-link rounded-3 bg-dark p-2 text-white" onClick={handleViewProductDetail}>
+                        View Detail 
+                    </button>
                 </div>
             </div>
         </div>

@@ -4,13 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Blogs from './pages/Blogs';
-import BlogDetail from './pages/BlogDetail';
 import Shop from './pages/Shop';
 import ShopDetail from './pages/ShopDetail';
-import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import { ProductProvider } from './context/ProductContext';
+import ProductFeature from './pages/ProductFeature';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 export default function App() {
   return (
@@ -20,12 +20,12 @@ export default function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/blogs' element={<Blogs />} />
-          <Route path='/' element={<BlogDetail />} />
           <Route path='/shops' element={<Shop />} />
-          <Route path='/' element={<ShopDetail />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/feature-pro' element={<ProductFeature/>} />
+          <Route path='/product/:id' element={<ShopDetail />} />
           <Route path='/checkout' element={<Checkout />} />
+          <Route path='/login' element={<LogIn />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
       </ProductProvider>
     </BrowserRouter>

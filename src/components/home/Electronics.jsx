@@ -37,7 +37,7 @@ export default function Electronics() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="section-header d-flex flex-wrap justify-content-between mb-5">
-                            <h2 className="section-title">Product Features</h2>
+                            <h2 className="section-title">Electronics</h2>
                             <div className="d-flex align-items-center">
                                 <Link to="#" className="btn-link text-decoration-none">
                                     View All Categories →

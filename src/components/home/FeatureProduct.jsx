@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import assets from '../../assets/images/assets'
+import { useNavigate } from 'react-router-dom';
 
 export default function FeatureProduct() {
 
@@ -25,6 +26,13 @@ export default function FeatureProduct() {
         );
     };
 
+    //go to feature detail page
+    const navigate = useNavigate();
+
+    const goToFeaturePage = (feature) => {
+        navigate('/feature-pro', { state: { feature } });
+    };
+
     return (
         <section className="py-5 overflow-hidden">
             <div className="container-fluid">
@@ -47,12 +55,17 @@ export default function FeatureProduct() {
                 <div className="row">
                     <div className="col-md-12 d-flex transition-transform"
                         style={{
-                            transform: `translateX(-${currentIndex * 260}px)`, 
+                            transform: `translateX(-${currentIndex * 260}px)`,
                             transition: "transform 0.5s ease",
                         }}>
 
                         {features.map((feature, index) => (
-                            <div className="col-5 me-4" key={index}>
+                            <div
+                                className="col-5 me-4 text-decoration-none"
+                                key={index}
+                                onClick={() => goToFeaturePage(feature)}
+                                // to={{ pathname: '/feature-pro', state: { feature: feature } }}
+                            >
                                 <div className="card w-100 mb-3 p-3 rounded-4 shadow border-0">
                                     <div className="row g-0">
                                         <div className="col-md-5">
