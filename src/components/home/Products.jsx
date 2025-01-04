@@ -7,7 +7,7 @@ export default function Products() {
     const { products, loading, error } = useContext(ProductContext);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div class="container-fluid">Loading...</div>;
     }
 
     if (error) {

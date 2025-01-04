@@ -105,8 +105,16 @@ export const ProductProvider = ({ children }) => {
     //show only the products that was selected
     const selectedProducts = products.filter((product) => selectedItems[product.id] > 0);
 
+    const resetOrder = () => {
+        setSelectedItems([]);
+        setSelectedItems({});
+        setTotalItems(0);
+        setTotalPrice(0);
+    };
+
     return (
         <ProductContext.Provider value={{
+            resetOrder,
             products,
             categories,
             loading,
