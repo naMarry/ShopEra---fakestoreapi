@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/ShopEra---fakestoreapi/static/css/main.d6fbd01f.css",
-    "main.js": "/ShopEra---fakestoreapi/static/js/main.5bfa6b98.js",
-    "static/js/453.da6ca846.chunk.js": "/ShopEra---fakestoreapi/static/js/453.da6ca846.chunk.js",
-    "static/media/productHero.png": "/ShopEra---fakestoreapi/static/media/productHero.cf9b881bb993b3a49211.png",
-    "static/media/feature4.jpg": "/ShopEra---fakestoreapi/static/media/feature4.182d40911bad501a8ddf.jpg",
-    "static/media/cartImage.png": "/ShopEra---fakestoreapi/static/media/cartImage.bc6e207e6471865afd78.png",
-    "static/media/a1.jpg": "/ShopEra---fakestoreapi/static/media/a1.41331b61fe2e4d4d22c9.jpg",
-    "static/media/feature1.jpg": "/ShopEra---fakestoreapi/static/media/feature1.c9a52fa3c445b2e958d6.jpg",
-    "static/media/feature2.jpg": "/ShopEra---fakestoreapi/static/media/feature2.43d1f0d1c916bf220563.jpg",
-    "static/media/f2.jpg": "/ShopEra---fakestoreapi/static/media/f2.2c722dc877dbda5b62e5.jpg",
-    "static/media/login.jpg": "/ShopEra---fakestoreapi/static/media/login.f405f85c9634d85c0c63.jpg",
-    "static/media/feature3.jpg": "/ShopEra---fakestoreapi/static/media/feature3.f737ce69ff6bf53ee3d6.jpg",
-    "static/media/f1.jpg": "/ShopEra---fakestoreapi/static/media/f1.4d6a20ac4c3f8d423150.jpg",
-    "static/media/a2.jpg": "/ShopEra---fakestoreapi/static/media/a2.15877da8d870d0c12776.jpg",
-    "static/media/logo.png": "/ShopEra---fakestoreapi/static/media/logo.444a37aaa29d087266c4.png",
-    "index.html": "/ShopEra---fakestoreapi/index.html",
-    "main.d6fbd01f.css.map": "/ShopEra---fakestoreapi/static/css/main.d6fbd01f.css.map",
-    "main.5bfa6b98.js.map": "/ShopEra---fakestoreapi/static/js/main.5bfa6b98.js.map",
-    "453.da6ca846.chunk.js.map": "/ShopEra---fakestoreapi/static/js/453.da6ca846.chunk.js.map"
+    "main.css": "/naMarry/ShopEra---fakestoreapi/static/css/main.d6fbd01f.css",
+    "main.js": "/naMarry/ShopEra---fakestoreapi/static/js/main.a6a63847.js",
+    "static/js/453.da6ca846.chunk.js": "/naMarry/ShopEra---fakestoreapi/static/js/453.da6ca846.chunk.js",
+    "static/media/productHero.png": "/naMarry/ShopEra---fakestoreapi/static/media/productHero.cf9b881bb993b3a49211.png",
+    "static/media/feature4.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/feature4.182d40911bad501a8ddf.jpg",
+    "static/media/cartImage.png": "/naMarry/ShopEra---fakestoreapi/static/media/cartImage.bc6e207e6471865afd78.png",
+    "static/media/a1.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/a1.41331b61fe2e4d4d22c9.jpg",
+    "static/media/feature1.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/feature1.c9a52fa3c445b2e958d6.jpg",
+    "static/media/feature2.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/feature2.43d1f0d1c916bf220563.jpg",
+    "static/media/f2.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/f2.2c722dc877dbda5b62e5.jpg",
+    "static/media/login.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/login.f405f85c9634d85c0c63.jpg",
+    "static/media/feature3.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/feature3.f737ce69ff6bf53ee3d6.jpg",
+    "static/media/f1.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/f1.4d6a20ac4c3f8d423150.jpg",
+    "static/media/a2.jpg": "/naMarry/ShopEra---fakestoreapi/static/media/a2.15877da8d870d0c12776.jpg",
+    "static/media/logo.png": "/naMarry/ShopEra---fakestoreapi/static/media/logo.444a37aaa29d087266c4.png",
+    "index.html": "/naMarry/ShopEra---fakestoreapi/index.html",
+    "main.d6fbd01f.css.map": "/naMarry/ShopEra---fakestoreapi/static/css/main.d6fbd01f.css.map",
+    "main.a6a63847.js.map": "/naMarry/ShopEra---fakestoreapi/static/js/main.a6a63847.js.map",
+    "453.da6ca846.chunk.js.map": "/naMarry/ShopEra---fakestoreapi/static/js/453.da6ca846.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6fbd01f.css",
-    "static/js/main.5bfa6b98.js"
+    "static/js/main.a6a63847.js"
   ]
 }
